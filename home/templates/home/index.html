@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+      
+      <div class="main-wrap">
+        <div class="cover_1">
+          <div class="img_bg" style="background-image: url({% static 'site_static/img/vegan_dish.jpg' %})"  data-stellar-background-ratio="0.5">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-12" data-aos="fade-up">
+                  <h9 class="heading">Plant Miami heralds a modern plant-based approach with an emphasis on vibrant organic living foods, with a commitment to the art of conscious cuisine. We invite you to nourish from the inside out with our enlightened plant-empowered cuisine</h9>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- .cover_1 -->
+
+        <div class="section services-section">
+          <div class="container">
+             
+            <div class="row">
+              <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="media feature-icon d-block text-center">
+                  <div class="icon">
+                    <span class="flaticon-soup"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3>Our Approach</h3>
+                    <p>Plant Miami heralds a modern plant-based approach with an emphasis on vibrant organic living foods, with a commitment to the art of conscious cuisine. Featuring vegan, kosher dishes naturally inspired by the South Florida landscape, we use the purest ingredients and highest sustainability practices in the industry.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="media feature-icon d-block text-center">
+                  <div class="icon">
+                    <span class="flaticon-vegetables"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3>From Farm to Table</h3>
+                    <p>The menu blends innovative technique with seasonal, local produce, and includes many classic living, vegan and gluten-free dishes. Most of our farm-to-chef ingredients are locally sourced from our own Paradise Farms, including specialty micro greens and 67 varieties of edible flowers.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="media feature-icon d-block text-center">
+                  <div class="icon">
+                    <span class="flaticon-pancake"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3>The Experience</h3>
+                    <p>The dining room features an elemental, contemporary environment with a view of the immaculate exposed kitchen, illustrating our deep commitment in integrity and transparency of process. The patio effortlessly integrates the natural beauty of the space. Diners overlook a gold-tiled reflecting pond, a guava grove, a meditation garden and outdoor lounge.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="media feature-icon d-block text-center">
+                  <div class="icon">
+                    <span class="flaticon-tray"></span>
+                  </div>
+                  <div class="media-body">
+                    <h3>Great Service</h3>
+                    <p>Excellent service is the number one job in any restaurant! It is the personality of the restaurant and the reason customers come back. Without customers there is no restaurant!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- .section -->
+
+       
+
+        <div class="section">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-7 text-center"  data-aos="fade-up">
+                <h2 class="mb-4">Our Specialties</h2>
+                <p class="lead">Featuring vegan, kosher dishes naturally inspired by the South Florida landscape, we use the purest ingredients and highest sustainability practices in the industry. </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- .section -->
+        
+        <div class="section pt-0 pb-0">
+
+          <div class="menus d-flex bg-light">
+
+            {% for meal in meals|slice:":6" %}
+
+
+              <div class="d-flex item">
+              <div class="image" style="background-image: url({{meal.image.url}});" data-aos="fade"></div>
+              <div class="text">
+                <h3>{{meal.name}}</h3>
+               
+                <p class="price">${{meal.price}}</p>
+              </div>
+            </div> <!-- .item -->
+
+            {% endfor %}        
+
+          </div>
+        </div> <!-- .section -->
+
+       
+
+      
+{% endblock body %}
+      
