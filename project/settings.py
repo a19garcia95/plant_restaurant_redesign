@@ -137,7 +137,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-ALLOWED_HOSTS = ['157.230.53.23', 'localhost']
+
 
 try:
     from .local_settings import *
